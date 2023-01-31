@@ -37,27 +37,28 @@ int main(int argc, char *argv[])
   // clear background color.
   bkgd(COLOR_PAIR(1));
   // subwin(WINDOW*, int nlines, int ncols, int begin_y, int begin_x)
-  messagebar = subwin(stdscr,1,80,23,1);
-  scrollmessage = subwin(stdscr,1,80,0,0);
-  // move the cursor
-  move(2,1);
+  messagebar = subwin(stdscr,1,80,1,1);
+  scrollmessage = subwin(stdscr,1,80,2,3);
   printw("ESC quits.");
   refresh();
 
   do
   {
-    key=getch();
+    key = getch();
     // clear
     werase(messagebar);
     // refresh
     wrefresh(messagebar);
-    wprintw(messagebar,"You haven't selected any item.");
+    wprintw(messagebar,"I am Message bar.");
 
     // clear
     werase(scrollmessage);
     // refresh
     wrefresh(scrollmessage);
-    wprintw(scrollmessage, "Message");
+    wprintw(scrollmessage, "I am scroll message.");
+    // The touchwin func raises a flag in the WINDOW structure to inform the refresh func that all lines have changed.
+    touchwin(stdscr);
+    refresh();
 
   } while (key!=ESC);
 
