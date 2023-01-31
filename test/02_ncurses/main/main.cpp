@@ -105,7 +105,7 @@ int scroll_menu(WINDOW **items,int count,int menu_start_col)
       items=draw_menu(20-menu_start_col);
       return scroll_menu(items,8,20-menu_start_col);
     }
-    else if (key==ESCAPE)
+    else if (key==ESC)
     {
       return -1;
     }
@@ -171,7 +171,7 @@ int main(int argc, char *argv[])
       touchwin(stdscr);
       refresh();
     }
-  } while (key!=ESCAPE);
+  } while (key!=ESC);
 
   delwin(menubar);
   delwin(messagebar);
