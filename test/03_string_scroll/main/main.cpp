@@ -8,6 +8,7 @@
 
 #ifdef __linux__
 #include <curses.h>
+#include <unistd.h>
 #endif
 
 #define ENTER 10
@@ -30,40 +31,38 @@ int main(int argc, char *argv[])
   int key;
   WINDOW *messagebar = nullptr;
   WINDOW *scrollmessage = nullptr;
+  int width = 0;
+  int height = 0;
 
   // init
   init_curses();
 
   // clear background color.
   bkgd(COLOR_PAIR(1));
+
+  // Get max size of height, width
+  getmaxyx(stdscr, height, width);
+  // Set max width
+  int x_pos = width;
+
   // subwin(WINDOW*, int nlines, int ncols, int begin_y, int begin_x)
-  messagebar = subwin(stdscr,1,80,1,1);
-  scrollmessage = subwin(stdscr,1,80,2,3);
   printw("ESC quits.");
   refresh();
 
   do
   {
-    key = getch();
     // clear
-    werase(messagebar);
-    // refresh
-    wrefresh(messagebar);
-    wprintw(messagebar,"I am Message bar.");
-
-    // clear
-    werase(scrollmessage);
-    // refresh
-    wrefresh(scrollmessage);
-    wprintw(scrollmessage, "I am scroll message.");
+    erase();
+    mvwprintw(stdscr, 2, x_pos, "I am scroll message.");
+    x_pos--;
     // The touchwin func raises a flag in the WINDOW structure to inform the refresh func that all lines have changed.
     touchwin(stdscr);
     refresh();
 
-  } while (key!=ESC);
+    usleep(40000);
 
-  delwin(scrollmessage);
-  delwin(messagebar);
+  } while (key != ESC && x_pos > 0);
+
   endwin();
   return 0;
 }
