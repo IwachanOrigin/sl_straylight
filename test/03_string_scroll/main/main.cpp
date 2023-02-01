@@ -14,6 +14,10 @@
 #define ENTER 10
 #define ESC 27
 
+#define CAT1 " /\\_/\\ "
+#define CAT2 "( o.o ) "
+#define CAT3 " > ^ < "
+
 void init_curses()
 {
   initscr();
@@ -53,7 +57,9 @@ int main(int argc, char *argv[])
   {
     // clear
     erase();
-    mvwprintw(stdscr, 2, x_pos, "I am scroll message.");
+    mvwprintw(stdscr, 2, x_pos, CAT1);
+    mvwprintw(stdscr, 3, x_pos, CAT2);
+    mvwprintw(stdscr, 4, x_pos, CAT3);
     x_pos--;
     // The touchwin func raises a flag in the WINDOW structure to inform the refresh func that all lines have changed.
     touchwin(stdscr);
