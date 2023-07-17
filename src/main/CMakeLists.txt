@@ -1,6 +1,7 @@
 
 set(main_src
   main.cpp
+  straylight.h
 )
 
 add_executable(
