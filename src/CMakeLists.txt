@@ -24,6 +24,6 @@ set_property(GLOBAL PROPERTY AUTOGEN_TARGETS_FOLDER AutoGenFiles)
 set_property(GLOBAL PROPERTY AUTOGEN_SOURCE_GROUP AutoGenFiles)
 
 find_package(Curses REQUIRED)
-include_directories(${CURSES_INCLUDE_DIR})
+include_directories(${CURSES_INCLUDE_DIRS})
 
 add_subdirectory(main)

@@ -7,9 +7,11 @@
 #include <cstdlib>
 
 #ifdef __linux__
-#include <curses.h>
+#include <ncurses.h>
 #include <unistd.h>
 #endif
+
+#include "straylight.h"
 
 #define ENTER 10
 #define ESC 27

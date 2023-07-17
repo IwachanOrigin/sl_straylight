@@ -9,5 +9,7 @@ add_executable(
   ${main_src}
 )
 
-target_link_libraries(${PROJECT_NAME} ${CURSES_LIBRARIES})
+target_link_libraries(
+  ${PROJECT_NAME}
+  ${CURSES_LIBRARIES})
 
