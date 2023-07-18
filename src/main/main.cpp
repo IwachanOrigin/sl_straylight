@@ -59,9 +59,12 @@ int main(int argc, char *argv[])
   {
     // clear
     erase();
-    mvwprintw(stdscr, 2, x_pos, CAT1);
-    mvwprintw(stdscr, 3, x_pos, CAT2);
-    mvwprintw(stdscr, 4, x_pos, CAT3);
+    mvwprintw(stdscr, 2, x_pos, "%s", SL_LOGO_LINE_001.c_str());
+    mvwprintw(stdscr, 3, x_pos, "%s", SL_LOGO_LINE_002.c_str());
+    mvwprintw(stdscr, 4, x_pos, "%s", SL_LOGO_LINE_003.c_str());
+    mvwprintw(stdscr, 5, x_pos, "%s", SL_LOGO_LINE_004.c_str());
+    mvwprintw(stdscr, 6, x_pos, "%s", SL_LOGO_LINE_005.c_str());
+    mvaddstr(8, x_pos, "Hello World");
     x_pos--;
     // The touchwin func raises a flag in the WINDOW structure to inform the refresh func that all lines have changed.
     touchwin(stdscr);
