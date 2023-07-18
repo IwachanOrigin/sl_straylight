@@ -28,7 +28,22 @@ static inline void init_curses()
   nodelay(stdscr, true);
   leaveok(stdscr, true);
   scrollok(stdscr, false);
-  keypad(stdscr, true);
+}
+
+static inline void mv_str(int& y, int& x, const std::string& str)
+{
+  int strPos = 0;
+  for (; x < 0; ++x, strPos++)
+  {
+    if (strPos >= str.length())
+    {
+      return;
+    }
+  }
+  for (; strPos < str.length(); x++, strPos++)
+  {
+    mvaddch(y, x, str[strPos]);
+  }
 }
 
 int main(int argc, char *argv[])
@@ -46,7 +61,7 @@ int main(int argc, char *argv[])
     // clear
     erase();
     x_pos--;
-    
+
     mvwprintw(stdscr, y - 10, x_pos, "%s", SL_LOGO_LINE_001.c_str());
     mvwprintw(stdscr, y - 9, x_pos, "%s", SL_LOGO_LINE_002.c_str());
     mvwprintw(stdscr, y - 8, x_pos, "%s", SL_LOGO_LINE_003.c_str());
@@ -69,12 +84,9 @@ int main(int argc, char *argv[])
     mvwprintw(stdscr, y + 9, x_pos, "%s", SL_LOGO_LINE_020.c_str());
     mvwprintw(stdscr, y + 10, x_pos, "%s", SL_LOGO_LINE_021.c_str());
 
-    // The touchwin func raises a flag in the WINDOW structure to inform the refresh func that all lines have changed.
-    touchwin(stdscr);
     refresh();
 
-    usleep(50000);
-
+    usleep(40000);
   }
   while (x_pos > 0);
 
