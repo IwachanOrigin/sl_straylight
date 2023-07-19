@@ -1,6 +1,5 @@
 
 #include <iostream>
-#include <vector>
 #include <string>
 #include <chrono>
 #include <thread>
@@ -8,7 +7,8 @@
 
 #ifdef __linux__
 #include <ncurses.h>
-#include <unistd.h>
+#else
+#include "curses.h"
 #endif
 
 #include "straylight.h"
@@ -54,6 +54,9 @@ int main(int argc, char *argv[])
   // Set max width
   int x_pos = COLS - 1;
   int y = LINES / 2;
+  // Set sleep time
+  std::chrono::microseconds duration(4);
+
   refresh();
 
   do
@@ -109,7 +112,7 @@ int main(int argc, char *argv[])
 #endif
     refresh();
 
-    usleep(40000);
+    std::this_thread::sleep_for(duration);
   }
   while (x_pos > (-SL_LOGO_MAX_LINE_SIZE));
 
