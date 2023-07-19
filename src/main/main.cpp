@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
   int x_pos = COLS - 1;
   int y = LINES / 2;
   // Set sleep time
-  std::chrono::microseconds duration(4);
+  std::chrono::microseconds duration(40000);
 
   refresh();
 
