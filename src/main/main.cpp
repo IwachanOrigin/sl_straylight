@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
 
     usleep(40000);
   }
-  while (x_pos > 0);
+  while (x_pos > (-SL_LOGO_MAX_LINE_SIZE));
 
   endwin();
   return 0;
