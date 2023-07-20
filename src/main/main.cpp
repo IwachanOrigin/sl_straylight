@@ -13,13 +13,6 @@
 
 #include "straylight.h"
 
-#define ENTER 10
-#define ESC 27
-
-#define CAT1 " /\\_/\\ "
-#define CAT2 "( o.o ) "
-#define CAT3 " > ^ < "
-
 static inline void init_curses()
 {
   initscr();
@@ -87,29 +80,6 @@ int main(int argc, char *argv[])
     mv_str(y + 9, x_pos, SL_LOGO_LINE_020);
     mv_str(y + 10, x_pos, SL_LOGO_LINE_021);
 
-#if 0
-    mvwprintw(stdscr, y - 10, x_pos, "%s", SL_LOGO_LINE_001.c_str());
-    mvwprintw(stdscr, y - 9, x_pos, "%s", SL_LOGO_LINE_002.c_str());
-    mvwprintw(stdscr, y - 8, x_pos, "%s", SL_LOGO_LINE_003.c_str());
-    mvwprintw(stdscr, y - 7, x_pos, "%s", SL_LOGO_LINE_004.c_str());
-    mvwprintw(stdscr, y - 6, x_pos, "%s", SL_LOGO_LINE_005.c_str());
-    mvwprintw(stdscr, y - 5, x_pos, "%s", SL_LOGO_LINE_006.c_str());
-    mvwprintw(stdscr, y - 4, x_pos, "%s", SL_LOGO_LINE_007.c_str());
-    mvwprintw(stdscr, y - 3, x_pos, "%s", SL_LOGO_LINE_008.c_str());
-    mvwprintw(stdscr, y - 2, x_pos, "%s", SL_LOGO_LINE_009.c_str());
-    mvwprintw(stdscr, y - 1, x_pos, "%s", SL_LOGO_LINE_010.c_str());
-    mvwprintw(stdscr, y + 0, x_pos, "%s", SL_LOGO_LINE_011.c_str());
-    mvwprintw(stdscr, y + 1, x_pos, "%s", SL_LOGO_LINE_012.c_str());
-    mvwprintw(stdscr, y + 2, x_pos, "%s", SL_LOGO_LINE_013.c_str());
-    mvwprintw(stdscr, y + 3, x_pos, "%s", SL_LOGO_LINE_014.c_str());
-    mvwprintw(stdscr, y + 4, x_pos, "%s", SL_LOGO_LINE_015.c_str());
-    mvwprintw(stdscr, y + 5, x_pos, "%s", SL_LOGO_LINE_016.c_str());
-    mvwprintw(stdscr, y + 6, x_pos, "%s", SL_LOGO_LINE_017.c_str());
-    mvwprintw(stdscr, y + 7, x_pos, "%s", SL_LOGO_LINE_018.c_str());
-    mvwprintw(stdscr, y + 8, x_pos, "%s", SL_LOGO_LINE_019.c_str());
-    mvwprintw(stdscr, y + 9, x_pos, "%s", SL_LOGO_LINE_020.c_str());
-    mvwprintw(stdscr, y + 10, x_pos, "%s", SL_LOGO_LINE_021.c_str());
-#endif
     refresh();
 
     std::this_thread::sleep_for(duration);
