@@ -8,9 +8,9 @@
 #include <chrono>
 #include <thread>
 #include "straylight.h"
-#include "outputbaselogo.h"
+#include "outputdefaultlogo.h"
 
-int OutputBaseLogo::render()
+int OutputDefaultLogo::render()
 {
   // Set max width
   int x_pos = COLS - 1;
@@ -57,7 +57,7 @@ int OutputBaseLogo::render()
   return 0;
 }
 
-void OutputBaseLogo::displayStr(int y, int x, const std::string& str)
+void OutputDefaultLogo::displayStr(int y, int x, const std::string& str)
 {
   int strPos = 0;
   for (; x < 0; ++x, strPos++)
