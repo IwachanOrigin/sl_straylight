@@ -12,6 +12,7 @@
 #endif
 
 #include "outputdefaultlogo.h"
+#include "outputcolorlogo.h"
 
 static inline void init_curses()
 {
@@ -27,11 +28,16 @@ int main(int argc, char *argv[])
 {
   // init
   init_curses();
-
+#if 0
   // Create
   OutputDefaultLogo odl;
   // Output BASE logo.
   odl.render();
+#else
+  // Create
+  OutputColorLogo ocl;
+  ocl.render();
+#endif
 
   endwin();
   return 0;

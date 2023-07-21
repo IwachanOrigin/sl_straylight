@@ -4,6 +4,8 @@ set(main_src
   straylight.h
   outputdefaultlogo.cpp
   outputdefaultlogo.h
+  outputcolorlogo.cpp
+  outputcolorlogo.h
 )
 
 add_executable(
