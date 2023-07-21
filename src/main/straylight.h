@@ -37,12 +37,16 @@ namespace color_logo
 {
 
 const int SL_COLOR_LOGO_MAX_LINE_SIZE = 280;
-const int SL_COLOR_LOGO_002_I_POS = 185;
+const int SL_COLOR_LOGO_002_ONE_POS   = 185;
+const int SL_COLOR_LOGO_002_TWO_POS   = 191;
+const int SL_COLOR_LOGO_002_THREE_POS = 197;
 const int SL_COLOR_LOGO_003_I_POS = 184;
 
 const std::string SL_COLOR_LOGO_LINE_001   = "_____________________________________________________________________________________________________________________________________________________________________        ______      ______        ______        ______          ____      _______________________________________";
 const std::string SL_COLOR_LOGO_LINE_002_A = "|                                                                                                                                                                    /      /     /     /";
-const std::string SL_COLOR_LOGO_LINE_002_B = "/       /     /       /     /         /   /     /                                       |";
+const std::string SL_COLOR_LOGO_LINE_002_B = "/       /";
+const std::string SL_COLOR_LOGO_LINE_002_C = "/       /";
+const std::string SL_COLOR_LOGO_LINE_002_D = "/         /   /     /                                       |";
 const std::string SL_COLOR_LOGO_LINE_003_A = "| ____   __             ______      _____________________________      _____________________________________________________________________________________________/      /     /     /";
 const std::string SL_COLOR_LOGO_LINE_003_B = "/       /_____/       /_____/         /   /     /___________      ______________         |";
 const std::string SL_COLOR_LOGO_LINE_004   = "|/   /  / /            /     /     /                            /     /                                                                                                   /     /                                                 /   /                 /     /              /        |";

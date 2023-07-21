@@ -18,8 +18,15 @@ int OutputColorLogo::render()
   int x_pos = COLS - 1;
   int y = LINES / 2;
   // Set color change parameters
-  int i_start_pos_002 = SL_COLOR_LOGO_002_I_POS;
-  int b_start_pos_002 = i_start_pos_002 + SL_COLOR_LOGO_PARTS_RED.size();
+  int one_start_pos_002 = SL_COLOR_LOGO_002_ONE_POS;
+  int b_start_pos_002 = one_start_pos_002 + SL_COLOR_LOGO_PARTS_RED.size();
+
+  int two_start_pos_002 = SL_COLOR_LOGO_002_TWO_POS;
+  int c_start_pos_002 = two_start_pos_002 + SL_COLOR_LOGO_PARTS_RED.size();
+
+  int three_start_pos_002 = SL_COLOR_LOGO_002_THREE_POS;
+  int d_start_pos_002 = three_start_pos_002 + SL_COLOR_LOGO_PARTS_RED.size();
+
   int i_start_pos_003 = SL_COLOR_LOGO_003_I_POS;
   int b_start_pos_003 = i_start_pos_003 + SL_COLOR_LOGO_PARTS_RED.size();
   // Set sleep time
@@ -40,9 +47,20 @@ int OutputColorLogo::render()
 
     this->displayStr(y - 9, x_pos, SL_COLOR_LOGO_LINE_002_A);
     attron(COLOR_PAIR(1));
-    this->displayStr(y - 9, x_pos + i_start_pos_002, SL_COLOR_LOGO_PARTS_RED);
+    // 1
+    this->displayStr(y - 9, x_pos + one_start_pos_002, SL_COLOR_LOGO_PARTS_RED);
     attroff(COLOR_PAIR(1));
     this->displayStr(y - 9, x_pos + b_start_pos_002, SL_COLOR_LOGO_LINE_002_B);
+    // 2
+    attron(COLOR_PAIR(1));
+    this->displayStr(y - 9, x_pos + two_start_pos_002, SL_COLOR_LOGO_PARTS_RED);
+    attroff(COLOR_PAIR(1));
+    this->displayStr(y - 9, x_pos + c_start_pos_002, SL_COLOR_LOGO_LINE_002_C);
+    // 3
+    attron(COLOR_PAIR(1));
+    this->displayStr(y - 9, x_pos + three_start_pos_002, SL_COLOR_LOGO_PARTS_RED);
+    attroff(COLOR_PAIR(1));
+    this->displayStr(y - 9, x_pos + d_start_pos_002, SL_COLOR_LOGO_LINE_002_D);
 
     this->displayStr(y - 8, x_pos, SL_COLOR_LOGO_LINE_003_A);
     attron(COLOR_PAIR(1));
