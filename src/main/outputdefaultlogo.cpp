@@ -10,6 +10,8 @@
 #include "straylight.h"
 #include "outputdefaultlogo.h"
 
+using namespace default_logo;
+
 int OutputDefaultLogo::render()
 {
   // Set max width
