@@ -14,6 +14,19 @@
 #include "outputdefaultlogo.h"
 #include "outputcolorlogo.h"
 
+static inline void usage()
+{
+  
+}
+
+static inline void checkOpt(int& mode)
+{
+  switch(mode)
+  {
+    
+  }
+}
+
 static inline void init_curses()
 {
   initscr();
@@ -26,6 +39,15 @@ static inline void init_curses()
 
 int main(int argc, char *argv[])
 {
+  if (argc > 2)
+  {
+    usage();
+    return -1;
+  }
+
+  int mode = 0;
+  checkOpt(mode);
+
   // init
   init_curses();
 #if 0
