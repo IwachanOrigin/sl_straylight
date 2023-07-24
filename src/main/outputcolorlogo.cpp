@@ -54,16 +54,16 @@ int OutputColorLogo::render()
 
     this->displayStr(y - 9, x_pos, SL_COLOR_LOGO_LINE_002_A);
     attron(COLOR_PAIR(1));
-    // 1
+    // line2-1
     this->displayStr(y - 9, x_pos + one_start_pos_002, SL_COLOR_LOGO_PARTS_RED);
     attroff(COLOR_PAIR(1));
     this->displayStr(y - 9, x_pos + b_start_pos_002, SL_COLOR_LOGO_LINE_002_B);
-    // 2
+    // line2-2
     attron(COLOR_PAIR(1));
     this->displayStr(y - 9, x_pos + two_start_pos_002, SL_COLOR_LOGO_PARTS_RED);
     attroff(COLOR_PAIR(1));
     this->displayStr(y - 9, x_pos + c_start_pos_002, SL_COLOR_LOGO_LINE_002_C);
-    // 3
+    // line2-3
     attron(COLOR_PAIR(1));
     this->displayStr(y - 9, x_pos + three_start_pos_002, SL_COLOR_LOGO_PARTS_RED);
     attroff(COLOR_PAIR(1));
@@ -71,16 +71,16 @@ int OutputColorLogo::render()
 
     this->displayStr(y - 8, x_pos, SL_COLOR_LOGO_LINE_003_A);
     attron(COLOR_PAIR(1));
-    // 1
+    // line3-1
     this->displayStr(y - 8, x_pos + one_start_pos_003, SL_COLOR_LOGO_PARTS_RED);
     attroff(COLOR_PAIR(1));
     this->displayStr(y - 8, x_pos + b_start_pos_003, SL_COLOR_LOGO_LINE_003_B);
-    // 2
+    // line3-2
     attron(COLOR_PAIR(1));
     this->displayStr(y - 8, x_pos + two_start_pos_003, SL_COLOR_LOGO_PARTS_RED);
     attroff(COLOR_PAIR(1));
     this->displayStr(y - 8, x_pos + c_start_pos_003, SL_COLOR_LOGO_LINE_003_C);
-    // 3
+    // line3-3
     attron(COLOR_PAIR(1));
     this->displayStr(y - 8, x_pos + three_start_pos_003, SL_COLOR_LOGO_PARTS_RED);
     attroff(COLOR_PAIR(1));

@@ -53,7 +53,6 @@ const std::string SL_COLOR_LOGO_LINE_003_A = "| ____   __             ______    
 const std::string SL_COLOR_LOGO_LINE_003_B = "/       /_____";
 const std::string SL_COLOR_LOGO_LINE_003_C = "/       /_____";
 const std::string SL_COLOR_LOGO_LINE_003_D = "/         /   /     /___________      ______________         |";
-
 const std::string SL_COLOR_LOGO_LINE_004   = "|/   /  / /            /     /     /                            /     /                                                                                                   /     /                                                 /   /                 /     /              /        |";
 const std::string SL_COLOR_LOGO_LINE_005   = "/   /  / /            /     /     /                            /     /________      __________________      ____________________________      _____           _____      /     /     ______      __________________________      /   /___________      /     /________      /         |";
 const std::string SL_COLOR_LOGO_LINE_006   = "   /  / /            /     /     /_____________________       /              /     /                 /     /                           /     /    /          /    /     /     /     /     /     /                         /     /               /     /              /     /          |";
