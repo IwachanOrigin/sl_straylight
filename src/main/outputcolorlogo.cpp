@@ -114,18 +114,3 @@ int OutputColorLogo::render()
   return 0;
 }
 
-void OutputColorLogo::displayStr(int y, int x, const std::string& str)
-{
-  int strPos = 0;
-  for (; x < 0; ++x, strPos++)
-  {
-    if (strPos >= str.length())
-    {
-      return;
-    }
-  }
-  for (; strPos < str.length(); x++, strPos++)
-  {
-    mvaddch(y, x, str[strPos]);
-  }
-}

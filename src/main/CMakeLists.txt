@@ -6,6 +6,8 @@ set(main_src
   outputdefaultlogo.h
   outputcolorlogo.cpp
   outputcolorlogo.h
+  outputlogo.h
+  outputlogo.cpp
 )
 
 add_executable(

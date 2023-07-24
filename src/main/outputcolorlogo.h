@@ -3,17 +3,15 @@
 #define OUTPUT_COLOR_LOGO_H_
 
 #include <string>
+#include "outputlogo.h"
 
-class OutputColorLogo
+class OutputColorLogo : public OutputLogo
 {
 public:
   explicit OutputColorLogo() = default;
   ~OutputColorLogo() = default;
 
-  int render();
-
-private:
-  void displayStr(int y, int x, const std::string& str);
+  int render() override;
 };
 
 #endif // OUTPUT_COLOR_LOGO_H_

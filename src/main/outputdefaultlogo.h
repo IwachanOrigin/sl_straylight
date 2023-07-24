@@ -3,17 +3,15 @@
 #define OUTPUT_DEFAULT_LOGO_H_
 
 #include <string>
+#include "outputlogo.h"
 
-class OutputDefaultLogo
+class OutputDefaultLogo : public OutputLogo
 {
 public:
   explicit OutputDefaultLogo() = default;
   ~OutputDefaultLogo() = default;
 
-  int render();
-
-private:
-  void displayStr(int y, int x, const std::string& str);
+  int render() override;
 };
 
 #endif // OUTPUT_DEFAULT_LOGO_H_
