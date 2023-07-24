@@ -8,7 +8,7 @@ class OutputLogo
 {
 public:
   explicit OutputLogo() = default;
-  ~OutputLogo() = default;
+  virtual ~OutputLogo() = default;
 
   virtual int render() = 0;
 

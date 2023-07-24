@@ -9,7 +9,7 @@ class OutputColorLogo : public OutputLogo
 {
 public:
   explicit OutputColorLogo() = default;
-  ~OutputColorLogo() = default;
+  virtual ~OutputColorLogo() = default;
 
   int render() override;
 };

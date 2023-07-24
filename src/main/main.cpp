@@ -11,8 +11,8 @@
 #include "curses.h"
 #endif
 
-#include "outputdefaultlogo.h"
-#include "outputcolorlogo.h"
+#include "outputlogofactory.h"
+#include "outputlogo.h"
 
 static inline void usage()
 {
@@ -50,17 +50,21 @@ int main(int argc, char *argv[])
 
   // init
   init_curses();
-#if 0
-  // Create
-  OutputDefaultLogo odl;
-  // Output BASE logo.
-  odl.render();
-#else
-  // Create
-  OutputColorLogo ocl;
-  ocl.render();
-#endif
+
+  //
+  LogoMode logoMode = LogoMode::DEFAULT;
+  OutputLogoFactory olf;
+  auto outputLogo =  olf.create(logoMode);
+  outputLogo->render();
 
   endwin();
+
+  // Release
+  if (outputLogo)
+  {
+    delete outputLogo;
+    outputLogo = nullptr;
+  }
+
   return 0;
 }

@@ -8,6 +8,8 @@ set(main_src
   outputcolorlogo.h
   outputlogo.h
   outputlogo.cpp
+  outputlogofactory.cpp
+  outputlogofactory.h
 )
 
 add_executable(
