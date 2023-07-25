@@ -19,14 +19,6 @@ static inline void usage()
   
 }
 
-static inline void checkOpt(int& mode)
-{
-  switch(mode)
-  {
-    
-  }
-}
-
 static inline void init_curses()
 {
   initscr();
@@ -45,14 +37,18 @@ int main(int argc, char *argv[])
     return -1;
   }
 
-  int mode = 0;
-  checkOpt(mode);
-
   // init
   init_curses();
 
-  //
-  LogoMode logoMode = LogoMode::DEFAULT;
+  // set option
+  int mode = 0;
+  if (argc == 2)
+  {
+    mode = std::atoi(argv[1]);
+  }
+
+  // convert mode
+  LogoMode logoMode = (LogoMode)mode;
   OutputLogoFactory olf;
   auto outputLogo =  olf.create(logoMode);
   outputLogo->render();
