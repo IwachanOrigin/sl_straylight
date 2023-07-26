@@ -29,17 +29,20 @@ There is nothing in particular to install.
 ### For Ubuntu 22.04
 gcc (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0  
 
+    cd src
     cmake -S . -B build  
     cmake --build build  
 
 ### For windows 10 with WSL(Ubuntu 22.04)
 Ninja + LLVM 16.0  
 
+    cd src
     powershell.exe cmake -S . -B build -G "\"Ninja Multi-Config"\"  
     powershell.exe cmake --build build  
 
 MSVC(Default)  
 
+    cd src
     powershell.exe cmake -S . -B build  
     powershell.exe cmake --build build  
 
