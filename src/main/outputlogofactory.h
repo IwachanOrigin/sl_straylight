@@ -8,6 +8,7 @@ enum class LogoMode
 {
   DEFAULT = 0
   , COLOR = 1
+  , HELP  = 99
 };
 
 class OutputLogoFactory

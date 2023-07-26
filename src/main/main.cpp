@@ -14,9 +14,19 @@
 #include "outputlogofactory.h"
 #include "outputlogo.h"
 
-static inline void usage()
+static inline void usage(const char* progname)
 {
-  
+  // Output command line parameter.
+  std::cout << std::endl
+            << progname
+            << " <Mode>"
+            << std::endl;
+  std::cout << "i.e.," << std::endl;
+  std::cout << progname << " 1" << std::endl << std::endl;
+
+  std::cout << "------- MODE -------" << std::endl;
+  std::cout << " 0 : Default straylight logo." << std::endl;
+  std::cout << " 1 : Color straylight logo." << std::endl << std::endl;
 }
 
 static inline void init_curses()
@@ -33,22 +43,29 @@ int main(int argc, char *argv[])
 {
   if (argc > 2)
   {
-    usage();
+    usage(argv[0]);
     return -1;
   }
 
-  // init
-  init_curses();
-
-  // set option
+  // Set option
   int mode = 0;
   if (argc == 2)
   {
     mode = std::atoi(argv[1]);
   }
 
-  // convert mode
+  // Convert mode
   LogoMode logoMode = (LogoMode)mode;
+  if (logoMode == LogoMode::HELP)
+  {
+    usage(argv[0]);
+    return -1;
+  }
+
+  // Init
+  init_curses();
+
+  // Output logo
   OutputLogoFactory olf;
   auto outputLogo =  olf.create(logoMode);
   outputLogo->render();
