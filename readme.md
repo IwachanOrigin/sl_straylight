@@ -3,9 +3,10 @@
 
 ## Introduction
 
-    
+    This is a straylight version of the SL command.  
 
 ## Demo
+
 
 ## Dependency
 
@@ -16,7 +17,7 @@
 
 ### For Windows
 
-    
+There is nothing in particular to install.  
 
 ### For Ubuntu 22.04
 
@@ -26,25 +27,47 @@
 ## Build
 
 ### For Ubuntu 22.04
-
-    - gcc (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0  
+gcc (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0  
 
     cmake -S . -B build  
     cmake --build build  
 
-
-### For windows 10
-
-    - Ninja + LLVM 16.0  
+### For windows 10 with WSL(Ubuntu 22.04)
+Ninja + LLVM 16.0  
 
     powershell.exe cmake -S . -B build -G "\"Ninja Multi-Config"\"  
     powershell.exe cmake --build build  
 
-
-    - MSVC(Default)  
+MSVC(Default)  
 
     powershell.exe cmake -S . -B build  
     powershell.exe cmake --build build  
+
+## How to use
+
+1. Build this repository.  
+2. Run the generated binary from the console.  
+i.e, ./sl  
+
+## Options
+
+Options are available for this software according to several arguments.  
+Only numerical values can be used as arguments.  
+The following parameters are available.  
+
+### 0
+
+Default parameter. If no argument is specified, this value is used.  
+Scroll through the default logo. See Demo No.1 for behavior.  
+
+### 1
+
+Display the color version of the logo.  
+See Demo No.2 for behavior.  
+
+### 99
+
+Display the usage.  
 
 
 
