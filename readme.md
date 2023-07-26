@@ -13,6 +13,10 @@
     - ncurses  
     - PDCurses  
 
+### Note
+
+PDCurses builds v3.9 and includes the generated libraries and DLLs in this repository.  
+
 ## Setup
 
 ### For Windows
