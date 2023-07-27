@@ -105,11 +105,21 @@ int OutputColorLogo::render()
     this->displayStr(y + 9, x_pos, SL_COLOR_LOGO_LINE_020);
     this->displayStr(y + 10, x_pos, SL_COLOR_LOGO_LINE_021);
 
+    if (m_flushON)
+    {
+      if (x_pos % 2 == 0)
+      {
+        flash();
+      }
+    }
+
     refresh();
 
     std::this_thread::sleep_for(duration);
   }
   while (x_pos > (-SL_COLOR_LOGO_MAX_LINE_SIZE));
+
+  refresh();
 
   return 0;
 }
