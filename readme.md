@@ -1,5 +1,5 @@
 
-# sl Straylight
+# SL Straylight
 
 ## Introduction
 

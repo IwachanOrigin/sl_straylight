@@ -25,8 +25,9 @@ static inline void usage(const char* progname)
   std::cout << progname << " 1" << std::endl << std::endl;
 
   std::cout << "------- MODE -------" << std::endl;
-  std::cout << " 0 : Default straylight logo." << std::endl;
-  std::cout << " 1 : Color straylight logo." << std::endl << std::endl;
+  std::cout << " 0  : Default straylight logo." << std::endl;
+  std::cout << " 1  : Color straylight logo." << std::endl << std::endl;
+  std::cout << " 99 : Display usage." << std::endl << std::endl;
 }
 
 static inline void init_curses()
