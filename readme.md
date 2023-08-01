@@ -120,9 +120,9 @@ Break down your eyes with turn on this mode!!
 
 ## Thanks to
 
-- SL
-[SL](https://github.com/mtoyoda/sl)  
+- SL  
+[https://github.com/mtoyoda/sl](https://github.com/mtoyoda/sl)  
 
-- Straylight
-[straylight](https://shinycolors.idolmaster.jp/idol/straylight/)  
+- Straylight  
+[https://shinycolors.idolmaster.jp/idol/straylight/](https://shinycolors.idolmaster.jp/idol/straylight/)  
 
