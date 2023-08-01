@@ -12,6 +12,7 @@
 
     - ncurses  
     - PDCurses  
+    - (Straylight)  
 
 ### Note
 
@@ -87,13 +88,13 @@ Scroll through the default logo. See Demo No.1 for behavior.
 #### 1
 
 Display the color version of the logo.  
-See Demo No.2 for behavior.  
+See below gif.  
 
 #### 99
 
 Display the usage.  
 If this parameter is set, the second argument is ignored.  
-
+See below image file.  
 
 ### Second argument
 
@@ -108,6 +109,7 @@ This is default value.
 #### 1
 
 Flash ON.  
+See below gif.  
 Break down your eyes!!  
 
 
