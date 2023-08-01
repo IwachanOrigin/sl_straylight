@@ -32,6 +32,30 @@ else()
   find_package(Curses REQUIRED)
 endif()
 
-include_directories(${CURSES_INCLUDE_DIRS})
+find_package(Git REQUIRED)
+
+# Define the version numbers
+set(SOFTWARE_VERSION_MAJOR 1)
+set(SOFTWARE_VERSION_MINOR 0)
+set(SOFTWARE_VERSION_PATCH 0)
+
+# Get git hash
+execute_process(
+  COMMAND ${GIT_EXECUTABLE} rev-parse --short HEAD
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  OUTPUT_VARIABLE GIT_SHA1
+  OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+# Configure version.h.in to create version.h
+configure_file(
+  ${CMAKE_CURRENT_SOURCE_DIR}/version.h.in
+  ${CMAKE_CURRENT_SOURCE_DIR}/version.h
+)
+
+include_directories(
+  ${CURSES_INCLUDE_DIRS}
+  ${CMAKE_CURRENT_SOURCE_DIR} # For version.h
+)
 
 add_subdirectory(main)
