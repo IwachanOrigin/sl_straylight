@@ -28,14 +28,12 @@ There is nothing in particular to install.
     sudo apt install build-essential  
     sudo apt install libncursesw6-dev  
 
+### For Raspbian 11(bullseye)
+
+    sudo apt install build-essential  
+    sudo apt install libncursesw5-dev  
+
 ## Build
-
-### For Ubuntu 22.04
-gcc (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0  
-
-    cd src
-    cmake -S . -B build  
-    cmake --build build  
 
 ### For windows 10 with WSL(Ubuntu 22.04)
 Ninja + LLVM 16.0  
@@ -50,6 +48,20 @@ MSVC(Default)
     powershell.exe cmake -S . -B build  
     powershell.exe cmake --build build  
 
+### For Ubuntu 22.04
+gcc (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0  
+
+    cd src
+    cmake -S . -B build  
+    cmake --build build  
+
+### For Raspbian 11(bullseye)
+gcc (Debian 10.2.1-6) 10.2.1 20210110  
+
+    cd src
+    cmake -S . -B build  
+    cmake --build build  
+
 ## How to use
 
 1. Build this repository.  
@@ -60,21 +72,42 @@ i.e, ./sl
 
 Options are available for this software according to several arguments.  
 Only numerical values can be used as arguments.  
+Up to the second argument can be set.  
 The following parameters are available.  
 
-### 0
+### First argument
+
+Changes the mode of the scrolling logo.  
+
+#### 0
 
 Default parameter. If no argument is specified, this value is used.  
 Scroll through the default logo. See Demo No.1 for behavior.  
 
-### 1
+#### 1
 
 Display the color version of the logo.  
 See Demo No.2 for behavior.  
 
-### 99
+#### 99
 
 Display the usage.  
+If this parameter is set, the second argument is ignored.  
 
+
+### Second argument
+
+Enable flash.  
+It will be very flashy and cool. Instead, your eyes will break down.  
+
+#### 0
+
+Flash OFF.  
+This is default value.  
+
+#### 1
+
+Flash ON.  
+Break down your eyes!!  
 
 
