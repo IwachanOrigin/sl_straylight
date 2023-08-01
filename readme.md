@@ -116,5 +116,13 @@ See below gif.
 This gif is 10fps, so it still takes care of your eyes.  
 Break down your eyes with turn on this mode!!  
 
-![color_logo_scroll](assets/images/color_logo_scroll.gif)  
+![flashmode](assets/images/flashmode.gif)  
+
+## Thanks to
+
+- SL
+[SL](https://github.com/mtoyoda/sl)  
+
+- Straylight
+[straylight](https://shinycolors.idolmaster.jp/idol/straylight/)  
 
