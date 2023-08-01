@@ -32,7 +32,7 @@ static inline void usage(const char* progname)
 
   std::cout << "------- FLUSH -------" << std::endl;
   std::cout << " 0  : flush off. default." << std::endl;
-  std::cout << " 1  : flush on. Maybe break the console color." << std::endl;
+  std::cout << " 1  : flush on. Maybe break the console color." << std::endl << std::endl;
 }
 
 static inline void init_curses()
