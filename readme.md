@@ -5,8 +5,7 @@
 
     This is a straylight version of the SL command.  
 
-## Demo
-
+![default_logo_scroll](assets/images/default_logo_scroll.gif)  
 
 ## Dependency
 
@@ -85,18 +84,20 @@ Changes the mode of the scrolling logo.
 #### 0
 
 Default parameter. If no argument is specified, this value is used.  
-Scroll through the default logo. See Demo No.1 for behavior.  
+Scroll through the default logo. See top of this page.  
 
 #### 1
 
 Display the color version of the logo.  
 See below gif.  
 
+![color_logo_scroll](assets/images/color_logo_scroll.gif)  
+
 #### 99
 
 Display the usage.  
 If this parameter is set, the second argument is ignored.  
-See below image file.  
+See the options image above.  
 
 ### Second argument
 
@@ -112,6 +113,8 @@ This is default value.
 
 Flash ON.  
 See below gif.  
-Break down your eyes!!  
+This gif is 10fps, so it still takes care of your eyes.  
+Break down your eyes with turn on this mode!!  
 
+![color_logo_scroll](assets/images/color_logo_scroll.gif)  
 
