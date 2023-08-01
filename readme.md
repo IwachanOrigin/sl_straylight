@@ -76,6 +76,8 @@ Only numerical values can be used as arguments.
 Up to the second argument can be set.  
 The following parameters are available.  
 
+![options](assets/images/options.png)  
+
 ### First argument
 
 Changes the mode of the scrolling logo.  
