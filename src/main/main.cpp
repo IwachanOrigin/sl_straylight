@@ -13,6 +13,7 @@
 
 #include "outputlogofactory.h"
 #include "outputlogo.h"
+#include "version.h"
 
 static inline void usage(const char* progname)
 {
@@ -33,6 +34,13 @@ static inline void usage(const char* progname)
   std::cout << "------- FLUSH -------" << std::endl;
   std::cout << " 0  : flush off. default." << std::endl;
   std::cout << " 1  : flush on. Maybe break the console color." << std::endl << std::endl;
+
+  std::cout << progname
+            << " v" << SOFTWARE_VERSION_MAJOR
+            << "." << SOFTWARE_VERSION_MINOR
+            << "." << SOFTWARE_VERSION_PATCH
+            << " " << SOFTWARE_GIT_SHA1_VAL
+            << std::endl << std::endl;
 }
 
 static inline void init_curses()
